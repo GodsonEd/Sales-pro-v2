@@ -26,6 +26,7 @@ class App extends React.Component {
         <Header></Header>
         <div className="container">
           {isLoginActive &&  <h1 className="title">Login</h1>}
+          
           {!isLoginActive &&  <h1 className="title">Register</h1>}
 
           <Side current = {current} containerRef={ref => this.Side = ref} onClick = {this.changeState.bind(this)}/>

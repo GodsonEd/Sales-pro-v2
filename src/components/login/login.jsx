@@ -1,4 +1,5 @@
 import React from "react";
+import login from "../../login.jpg";
 
 
 export class Login extends React.Component {
@@ -10,9 +11,6 @@ export class Login extends React.Component {
         return(
         <div className="base-container" ref={this.props.containerRef}>
             <div className="content">
-                <div className="image">
-                    <img src="" />
-                </div>
                 <div className="form">
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
