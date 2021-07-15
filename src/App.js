@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import '../src/components/login/style.css';
+import './App.css';
 import React from 'react';
 import { Login } from "./components/login/login";
 import { Register } from "./components/login/register";
+import { Header } from "./components/header";
 
 class App extends React.Component {
 
@@ -14,7 +15,6 @@ class App extends React.Component {
   }
 
   changeState() {
-    const { isLoginActive } = this.state;
     this.setState((prevState) => ({ isLoginActive: !prevState.isLoginActive }))
   }
 
@@ -23,8 +23,13 @@ class App extends React.Component {
     const current = isLoginActive ? "Register" : "Login";
     return (
       <div className="App">
+        <Header></Header>
         <div className="container">
+          {isLoginActive &&  <h1 className="title">Login</h1>}
+          {!isLoginActive &&  <h1 className="title">Register</h1>}
+
           <Side current = {current} containerRef={ref => this.Side = ref} onClick = {this.changeState.bind(this)}/>
+
           {isLoginActive && <Login containerRef = {(ref) => this.current=(ref)}/> }
           {!isLoginActive && <Register containerRef = {(ref) => this.current=(ref)}/>}
         </div>
