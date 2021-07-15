@@ -67,4 +67,8 @@ input{
     cursor: pointer;
 }
 
-                
+.inner-container .text{
+    text-align: center;
+    padding: 30px;
+
+}        
