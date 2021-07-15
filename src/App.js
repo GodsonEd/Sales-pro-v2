@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import { Login } from "./components/login/login";
 import { Register } from "./components/login/register";
-import { Header } from "./components/header";
+import { Navbar } from "./components/navbar/navbar";
 
 class App extends React.Component {
 
@@ -23,7 +23,7 @@ class App extends React.Component {
     const current = isLoginActive ? "Register" : "Login";
     return (
       <div className="App">
-        <Header></Header>
+        <Navbar></Navbar>
         <div className="container">
           {isLoginActive &&  <h1 className="title">Login</h1>}
           

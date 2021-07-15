@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export class Header extends React.Component {
+export class Navbar extends React.Component {
     constructor(props) {
         super(props);
 

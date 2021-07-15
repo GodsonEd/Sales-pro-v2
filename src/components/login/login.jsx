@@ -1,5 +1,4 @@
 import React from "react";
-import login from "../../login.jpg";
 
 
 export class Login extends React.Component {
