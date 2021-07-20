@@ -1,4 +1,6 @@
 import React from "react";
+import './style.css';
+import { Link } from 'react-router-dom';
 
 
 export class Login extends React.Component {
@@ -10,6 +12,8 @@ export class Login extends React.Component {
         return(
         <div className="base-container" ref={this.props.containerRef}>
             <div className="content">
+                <h1 className="title">Login</h1>
+                <Link to="/register" className="switch-tab">Click here to Register instead</Link>
                 <div className="form">
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
@@ -20,12 +24,11 @@ export class Login extends React.Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" placeholder="Password" />
                     </div>
+                    <button type="button" className="btn">Login</button>
                 </div>
-            </div>
-            <div className="footer">
-                <button type="button" className="btn">Login</button>
             </div>
         </div>
         );
     }
 }
+export default Login
