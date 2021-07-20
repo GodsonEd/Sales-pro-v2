@@ -1,9 +1,12 @@
 import '../src/components/login/style.css';
 import './App.css';
 import React from 'react';
-import { Login } from "./components/login/login";
-import { Register } from "./components/login/register";
-import { Navbar } from "./components/navbar/navbar";
+import { Login } from "./components/login/Login";
+import { Register } from "./components/login/Register";
+import  Navbar from "./components/navbar/Navbar";
+
+//make color of website change with customer
+
 
 class App extends React.Component {
 
@@ -25,9 +28,9 @@ class App extends React.Component {
       <div className="App">
         <Navbar></Navbar>
         <div className="container">
-          {isLoginActive &&  <h1 className="title">Login</h1>}
+          {isLoginActive &&  <h1 className="title" style={{textAlign: "center", paddingTop: "50px"}}>Login</h1>}
           
-          {!isLoginActive &&  <h1 className="title">Register</h1>}
+          {!isLoginActive &&  <h1 className="title" style={{textAlign: "center", paddingTop: "50px"}}>Register</h1>}
 
           <Side current = {current} containerRef={ref => this.Side = ref} onClick = {this.changeState.bind(this)}/>
 
@@ -43,7 +46,7 @@ class App extends React.Component {
 const Side = props => {
   return <div className="side" ref={props.containerRef} onClick={props.onClick}>
     <div className="inner-container">
-      <div className="text">
+      <div className="text" style={{cursor: "pointer"}}>
         Click here to {props.current} instead.
       </div>  
     </div> 
