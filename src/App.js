@@ -3,7 +3,8 @@ import './App.css';
 import React from 'react';
 import { Login } from "./components/login/Login";
 import { Register } from "./components/login/Register";
-import  Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
+import { Home } from "./components/home/Home";
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 
 
@@ -30,7 +31,9 @@ class App extends React.Component {
         <BrowserRouter>
           <Navbar></Navbar>
           <Switch>
-                              
+                <Route exact path="/">
+                  <Home></Home>  
+                </Route>       
                 <Route path="/login">
                   <Login></Login>
                 </Route>

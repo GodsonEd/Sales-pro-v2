@@ -1,0 +1,20 @@
+.title{
+    text-align: center;
+    font-size: 100px;
+    font-weight: lighter;
+    margin-top: 3%;
+}
+.salesprotext{
+    font-weight: 900;
+    background: -webkit-linear-gradient(#eee 0%, #54e4ee 30%,#6568f4 60%, rgb(110, 90, 254) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.copy{
+    font-size: 25px;
+}
+.description{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
